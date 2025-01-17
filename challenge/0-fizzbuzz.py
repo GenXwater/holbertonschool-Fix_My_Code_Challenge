@@ -15,17 +15,17 @@ def fizzbuzz(limit):
     if limit < 1:
         return
 
-    results = []  # List to store FizzBuzz results
+    results = []
     for num in range(1, limit + 1):
-        if num % 15 == 0:  # Check if divisible by both 3 and 5
+        if num % 15 == 0:
             results.append("FizzBuzz")
-        elif num % 3 == 0:  # Check if divisible by 3
+        elif num % 3 == 0:
             results.append("Fizz")
-        elif num % 5 == 0:  # Check if divisible by 5
+        elif num % 5 == 0:
             results.append("Buzz")
         else:
-            results.append(str(num))  # Add the number as a string
-    print(" ".join(results))  # Print all results in a single line
+            results.append(str(num))
+    print(" ".join(results))
 
 
 if __name__ == '__main__':
@@ -35,9 +35,5 @@ if __name__ == '__main__':
         print("Example: ./0-fizzbuzz.py 89")
         sys.exit(1)
 
-    try:
-        number = int(sys.argv[1])  # Convert input to integer
-        fizzbuzz(number)
-    except ValueError:  # Handle cases where input is not a valid integer
-        print("Error: Input must be a valid integer")
-        sys.exit(1)
+    number = int(sys.argv[1])
+    fizzbuzz(number)
